@@ -16,7 +16,7 @@ const library = document.getElementById("library");
 function render() {
   myLibrary.forEach((item) => {
     const row = document.createElement("tr");
-
+    
     const bookId = document.createElement("th");
     bookId.scope = "row";
     bookId.textContent = myLibrary.indexOf(item) + 1;
@@ -30,7 +30,10 @@ function render() {
     bookRead.textContent = item.read;
 
     const bookRemove = document.createElement("td");
-    bookRemove.textContent = "remove?";
+    const removeButton = document.createElement('div');
+    removeButton.className = 'align-middle btn btn-danger p-1'
+    bookRemove.appendChild(removeButton)
+    removeButton.textContent = "DELETE";
 
     row.appendChild(bookId);
     row.appendChild(bookTitle);
