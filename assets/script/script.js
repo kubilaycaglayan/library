@@ -10,26 +10,23 @@ const myLibrary = [];
 myLibrary.push(new Book('The Call of The Wild', 'Jack London', '80'));
 myLibrary.push(new Book('Hitchiker\'s Guide to The Galaxy', 'Douglas Adams', '250', true));
 
-function addBookToLibrary(title, author, pages, read) {
-}
-
 const library = document.getElementById('library');
 function render() {
   myLibrary.forEach(item => {
     const row = document.createElement('tr');
-    const book_title = document.createElement('td');
-    book_title.textContent = item.title;
-    const book_author = document.createElement('td');
-    book_author.textContent = item.author;
-    const book_pages = document.createElement('td');
-    book_pages.textContent = item.pages;
-    const book_read = document.createElement('td');
-    book_read.textContent = item.read;
+    const bookTitle = document.createElement('td');
+    bookTitle.textContent = item.title;
+    const bookAuthor = document.createElement('td');
+    bookAuthor.textContent = item.author;
+    const bookPages = document.createElement('td');
+    bookPages.textContent = item.pages;
+    const bookRead = document.createElement('td');
+    bookRead.textContent = item.read;
 
-    row.appendChild(book_title);
-    row.appendChild(book_author);
-    row.appendChild(book_pages);
-    row.appendChild(book_read);
+    row.appendChild(bookTitle);
+    row.appendChild(bookAuthor);
+    row.appendChild(bookPages);
+    row.appendChild(bookRead);
     library.appendChild(row);
   });
 }
@@ -51,3 +48,36 @@ function showAddSection() {
 }
 
 addBookSectionButton.addEventListener('click', showAddSection);
+
+function addLastBook() {
+  const item = myLibrary[myLibrary.length - 1];
+  const row = document.createElement('tr');
+  const bookTitle = document.createElement('td');
+  bookTitle.textContent = item.title;
+  const bookAuthor = document.createElement('td');
+  bookAuthor.textContent = item.author;
+  const bookPages = document.createElement('td');
+  bookPages.textContent = item.pages;
+  const bookRead = document.createElement('td');
+  bookRead.textContent = item.read;
+
+  row.appendChild(bookTitle);
+  row.appendChild(bookAuthor);
+  row.appendChild(bookPages);
+  row.appendChild(bookRead);
+  library.appendChild(row);
+}
+
+
+function addBookToLibrary() {
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
+  const pages = document.getElementById('pages').value;
+  const read = document.querySelector('input[name="read"]:checked').value;
+
+  myLibrary.push(new Book(title, author, pages, read));
+  addLastBook();
+}
+
+const submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', addBookToLibrary);
