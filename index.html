@@ -8,47 +8,60 @@
   <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body class="text-center m-5">
-  <div class="badge badge-primary px-5 m-5">
+  <div class="badge badge-primary px-5 m-2">
     <h1 >Library</h1>
   </div>
-  <section>
-    <div class="badge badge-warning px-4 m-3">
-      <h4 >Add your favorite book to the library!</h2>
-    </div>
-    <form class="d-flex flex-column w-50 m-auto" action="">
-
-      <label for="title">Title</label>
-      <input type="text" name="title" id="title" placeholder="Add Title" required> 
-
-      <label for="author">Author</label>
-      <input type="text" name="author" id="author" placeholder="Add Author" required>
-
-      <label for="pages">Pages</label>
-      <input type="number" name="pages" id="pages" placeholder="Add Pages" required>
-
+  <main class="container-fluid">
+    <div class="row">
+    <div class="col-6">
+      <section>
+        <table id="library">
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Read</th>        
+          </tr>
+        </table>  
+      </section>
       <div>
-        <input type="radio" name="read" id="read_true" value="true">
-      <label for="read_true">I have read this book</label>
+        <div class="btn btn-primary" id="addBookSectionButton">
+          OPEN ADD BOOK SECTION
+        </div>
+      </div>
     </div>
-    <div>
-      <input type="radio" name="read" id="read_false" value="false">
-      <label for="read_false">I have not read this book</label>
+    <div class="col-6">
+      <section id="addBookSection">
+        <div class="badge badge-warning px-4 m-3">
+          <h4 >Add your favorite book to the library!</h2>
+        </div>
+        <form class="d-flex flex-column w-50 m-auto" action="">
+
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" placeholder="Add Title" required> 
+
+          <label for="author">Author</label>
+          <input type="text" name="author" id="author" placeholder="Add Author" required>
+
+          <label for="pages">Pages</label>
+          <input type="number" name="pages" id="pages" placeholder="Add Pages" required>
+
+          <div>
+            <input type="radio" name="read" id="read_true" value="true">
+          <label for="read_true">I have read this book</label>
+        </div>
+        <div>
+          <input type="radio" name="read" id="read_false" value="false">
+          <label for="read_false">I have not read this book</label>
+        </div>
+          <button type="submit" class="btn btn-success" id="submit">Add Book</button>
+
+        </form>
+      </section>
     </div>
-      <button type="submit" class="btn btn-success" id="submit">Add Book</button>
+  </div>
 
-    </form>
-  </section>
-
-  <section>
-    <table id="library">
-      <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Pages</th>
-        <th>Read</th>        
-      </tr>
-    </table>  
-  </section>
+</main>
   <script src="assets/script/script.js" type="text/javascript"></script>
 </body>
 </html>

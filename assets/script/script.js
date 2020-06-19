@@ -34,3 +34,20 @@ function render() {
   });
 }
 render();
+
+const addBookSectionButton = document.getElementById('addBookSectionButton');
+
+
+const addBookSection = document.getElementById('addBookSection');
+
+function showAddSection() {
+  if (addBookSectionButton.innerHTML === 'CLOSE ADD BOOK SECTION') {
+    addBookSection.style.display = 'none';
+    addBookSectionButton.innerHTML = 'OPEN ADD BOOK SECTION';
+  } else {
+    addBookSection.style.display = 'block';
+    addBookSectionButton.innerHTML = 'CLOSE ADD BOOK SECTION';
+  }
+}
+
+addBookSectionButton.addEventListener('click', showAddSection);
