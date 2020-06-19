@@ -7,35 +7,44 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/style.css">
 </head>
-<body class="text-center m-5">
-  <div class="badge badge-primary px-5 m-2">
-    <h1 >Library</h1>
-  </div>
+<body class="text-center m-2">
+
   <main class="container-fluid">
     <div class="row">
-    <div class="col-6">
+    <div class="col-8">
+      <div class="badge badge-primary px-5 m-4">
+        <h1 >Library</h1>
+      </div>
       <section>
-        <table id="library">
-          <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Pages</th>
-            <th>Read</th>        
-          </tr>
-        </table>  
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">TITLE</th>
+              <th scope="col">AUTHOR</th>
+              <th scope="col">PAGES</th>
+              <th scope="col">READ</th>
+              <th scope="col">REMOVE BOOK</th>
+            </tr>
+          </thead>
+          <tbody id="library">
+           
+          </tbody>
+        </table>
       </section>
+
+    </div>
+    <div class="col-4">
       <div>
-        <div class="btn btn-primary" id="addBookSectionButton">
+        <div class="btn btn-primary my-4" id="addBookSectionButton">
           OPEN ADD BOOK SECTION
         </div>
       </div>
-    </div>
-    <div class="col-6">
-      <section id="addBookSection">
-        <div class="badge badge-warning px-4 m-3">
-          <h4 >Add your favorite book to the library!</h2>
+      <section class="bg-primary p-3" id="addBookSection">
+        <div class="badge badge-warning p-2 m-1">
+          Add your favorite book to the library!
         </div>
-        <form class="d-flex flex-column w-50 m-auto" action="">
+        <form class="d-flex flex-column w-75 m-auto" action="">
 
           <label for="title">Title</label>
           <input type="text" name="title" id="title" placeholder="Add Title" required> 

@@ -1,4 +1,28 @@
+.badge-primary {
+  background-color: #FBC655;
+}
+
+.badge-primary * {
+  color: #63160F;
+}
+
+html * {
+  color: white;
+}
+
+body {
+  background-image: url("https://images2.alphacoders.com/261/thumb-1920-26102.jpg");
+  background-size: cover;
+  background-position-y: 100%;
+  height: 100vh;
+}
+
+body form input {
+  text-align: center;
+  color: #63160F;
+  font-weight: bold;
+}
+
 #addBookSection {
   display: none;
 }
-/*# sourceMappingURL=style.css.map */
