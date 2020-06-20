@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
+  <link rel="icon" href="https://img.pngio.com/book-free-vector-icons-designed-by-icon-pond-learning-week-logo-book-icon-png-512_512.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/style.css">
 </head>
@@ -45,7 +46,7 @@
         <div class="badge badge-warning p-2 m-1">
           Add your favorite book to the library!
         </div>
-        <form class="d-flex flex-column w-75 m-auto" action="">
+        <form class="d-flex flex-column w-75 m-auto" action="javascript:void(0);">
 
           <label for="title">Title</label>
           <input type="text" name="title" id="title" placeholder="Add Title" required> 
@@ -59,15 +60,12 @@
           <div>
             <input type="radio" name="read" id="read_true" value="true">
           <label for="read_true">I have read this book</label>
-        </div>
+          </div>
         <div>
           <input type="radio" name="read" id="read_false" value="false" checked>
           <label for="read_false">I have not read this book</label>
         </div>
-          <div class="btn btn-success" id="submit">
-            Add Book
-          </div>
-
+          <input type="submit" class="btn btn-success" id="submit" value="Add Book" >
 
         </form>
       </section>

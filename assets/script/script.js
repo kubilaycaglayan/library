@@ -142,9 +142,11 @@ function addBookToLibrary() {
   const pages = document.getElementById("pages").value;
   const read = document.querySelector('input[name="read"]:checked').value;
 
-  myLibrary.push(new Book(title, author, pages, read));
-  addLastBook();
-  document.getElementsByTagName("form")[0].reset();
+  if ( title.length > 0 && author.length > 0 && pages.length > 0 ) {
+    myLibrary.push(new Book(title, author, pages, read));
+    addLastBook();
+    document.getElementsByTagName("form")[0].reset();
+  }
 }
 
 const submitButton = document.getElementById("submit");
