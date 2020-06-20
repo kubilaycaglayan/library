@@ -9,7 +9,7 @@ let myLibrary = [];
 
 myLibrary.push(new Book("The Call of The Wild", "Jack London", "80"));
 myLibrary.push(new Book("Great Expectations", "Charles Dickens", "554"));
-myLibrary.push(new Book("The Little Prince", "Antuan", "120"));
+myLibrary.push(new Book("The Little Prince", "Antoine de Saint-Exupéry", "120"));
 myLibrary.push(new Book("Hitchiker's Guide to The Galaxy", "Douglas Adams", "250", true));
 
 function deleteBook (bookId) {
@@ -30,6 +30,11 @@ function reloadLibrary() {
   render()
 }
 
+function changeReadStatus (bookId) {
+  myLibrary[bookId].read = !myLibrary[bookId].read
+  reloadLibrary()
+}
+
 function render() {
   myLibrary.forEach((item) => {
     const row = document.createElement("tr");
@@ -43,8 +48,24 @@ function render() {
     bookAuthor.textContent = item.author;
     const bookPages = document.createElement("td");
     bookPages.textContent = item.pages;
+
+    const chStatus = document.createElement("td");
+    const changeReadStatusButton = document.createElement('div');
+    changeReadStatusButton.className = 'align-middle btn btn-warning p-1'
+    chStatus.appendChild(changeReadStatusButton)
+    changeReadStatusButton.textContent = 'Change'
+
+    changeReadStatusButton.addEventListener("click", function(){ changeReadStatus(bookId.textContent - 1); });
+
     const bookRead = document.createElement("td");
-    bookRead.textContent = item.read;
+    if (item.read) {
+      bookRead.textContent = 'Read';
+    } else {
+      bookRead.textContent = 'Not Read';
+    }
+
+
+    
 
     const bookRemove = document.createElement("td");
     const removeButton = document.createElement('div');
@@ -58,6 +79,7 @@ function render() {
     row.appendChild(bookTitle);
     row.appendChild(bookAuthor);
     row.appendChild(bookPages);
+    row.appendChild(chStatus);
     row.appendChild(bookRead);
     row.appendChild(bookRemove);
     library.appendChild(row);
