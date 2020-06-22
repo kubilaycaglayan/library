@@ -22,11 +22,10 @@ function render() {
     chStatus.appendChild(changeReadStatusButton);
     changeReadStatusButton.textContent = 'Change';
 
-    changeReadStatusButton.addEventListener('click', () => { 
-
+    changeReadStatusButton.addEventListener('click', () => {
       item.changeReadStatus();
-      localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-      render(); 
+      localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+      render();
     });
 
     const bookRead = document.createElement('td');
@@ -62,7 +61,7 @@ function deleteBook(bookId) {
   const confirmation = window.confirm('Do you want to remove that book?');
   if (confirmation) {
     myLibrary.splice(bookId, 1);
-    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
     render();
   } else {
     render();
@@ -83,9 +82,7 @@ function showAddSection() {
   }
 }
 
-
 addBookSectionButton.addEventListener('click', showAddSection);
-
 
 const submitButton = document.getElementById('submit');
 submitButton.addEventListener('click', addBookToLibrary);
