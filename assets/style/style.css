@@ -1,13 +1,13 @@
+html * {
+  color: white;
+}
+
 .badge-primary {
-  background-color: #FBC655;
+  background-color: #fbc655;
 }
 
 .badge-primary * {
-  color: #63160F;
-}
-
-html * {
-  color: white;
+  color: #63160f;
 }
 
 html body {
@@ -19,13 +19,13 @@ html body {
 
 html body form input {
   text-align: center;
-  color: #63160F;
+  color: #63160f;
   font-weight: bold;
 }
 
 html body table .btn-warning {
-  background-color: #FBC655;
-  color: #63160F;
+  background-color: #fbc655;
+  color: #63160f;
 }
 
 #addBookSection {
