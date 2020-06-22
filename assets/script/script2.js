@@ -5,6 +5,8 @@ function Book(title, author, pages, read = false) {
   this.read = read;
 }
 
+Book.prototype.changeReadStatus= function (){this.read = this.read == true ? false : true;}
+
 let myLibrary = [];
 
 myLibrary.push(new Book("The Call of The Wild", "Jack London", "80"));
@@ -14,37 +16,23 @@ myLibrary.push(new Book("Hitchiker's Guide to The Galaxy", "Douglas Adams", "250
 
 function deleteBook (bookId) {
   if(confirm("Do you want to remove that book?")){
-    myLibrary.splice(bookId, 1);
-    render();
-} else {
-    render();
-}           
+        myLibrary.splice(bookId, 1);
+        render();
+    } else {
+        render();
+    }           
 }
 
 const library = document.getElementById("library");
 
-/*function reloadLibrary() {
-  let listLength = library.childNodes.length
-  for (var i = listLength - 1; i > 0; i--) {
-    library.childNodes[i].remove()
-  }
-  render()
-}
-
-function changeReadStatus (bookId) {
-  myLibrary[bookId].read = !myLibrary[bookId].read
-}*/
-
-Book.prototype.changeReadStatus= function (){this.read = this.read == true ? false : true;}
-
 function render() {
   library.innerHTML = "";
-  myLibrary.forEach((item) => {
+  myLibrary.forEach((item, index) => {
     const row = document.createElement("tr");
     
     const bookId = document.createElement("th");
     bookId.scope = "row";
-    bookId.textContent = myLibrary.indexOf(item) + 1;
+    bookId.textContent = index + 1;
     const bookTitle = document.createElement("td");
     bookTitle.textContent = item.title;
     const bookAuthor = document.createElement("td");
@@ -65,10 +53,7 @@ function render() {
       bookRead.textContent = 'Read';
     } else {
       bookRead.textContent = 'Not Read';
-    }
-
-
-    
+    }    
 
     const bookRemove = document.createElement("td");
     const removeButton = document.createElement('div');
@@ -76,7 +61,7 @@ function render() {
     bookRemove.appendChild(removeButton)
     removeButton.textContent = "DELETE";
 
-    removeButton.addEventListener("click", function(){ deleteBook(bookId.textContent - 1); });
+    removeButton.addEventListener("click", function(){ deleteBook(index); });
 
     row.appendChild(bookId);
     row.appendChild(bookTitle);
@@ -106,39 +91,6 @@ function showAddSection() {
 
 addBookSectionButton.addEventListener("click", showAddSection);
 
-/*function addLastBook() {
-  const item = myLibrary[myLibrary.length - 1];
-  const row = document.createElement("tr");
-
-  const bookId = document.createElement("th");
-  bookId.scope = "row";
-  bookId.textContent = myLibrary.indexOf(item) + 1;
-  const bookTitle = document.createElement("td");
-  bookTitle.textContent = item.title;
-  const bookAuthor = document.createElement("td");
-  bookAuthor.textContent = item.author;
-  const bookPages = document.createElement("td");
-  bookPages.textContent = item.pages;
-  const bookRead = document.createElement("td");
-  bookRead.textContent = item.read;
-
-  const bookRemove = document.createElement("td");
-  const removeButton = document.createElement('div');
-  removeButton.className = 'align-middle btn btn-danger p-1'
-  bookRemove.appendChild(removeButton)
-  removeButton.textContent = "DELETE";
-
-  removeButton.addEventListener("click", function(){ deleteBook(bookId.textContent - 1); });
-
-  row.appendChild(bookId);
-  row.appendChild(bookTitle);
-  row.appendChild(bookAuthor);
-  row.appendChild(bookPages);
-  row.appendChild(bookRead);
-  row.appendChild(bookRemove);
-  library.appendChild(row);
-}*/
-
 function addBookToLibrary() {
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
@@ -147,8 +99,8 @@ function addBookToLibrary() {
 
   if ( title.length > 0 && author.length > 0 && pages.length > 0 ) {
     myLibrary.push(new Book(title, author, pages, read));
-    render();
     document.getElementsByTagName("form")[0].reset();
+    render();
   }
 }
 
