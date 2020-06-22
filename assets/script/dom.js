@@ -22,7 +22,12 @@ function render() {
     chStatus.appendChild(changeReadStatusButton);
     changeReadStatusButton.textContent = 'Change';
 
-    changeReadStatusButton.addEventListener('click', () => { item.changeReadStatus(); render(); });
+    changeReadStatusButton.addEventListener('click', () => { 
+
+      item.changeReadStatus();
+      localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+      render(); 
+    });
 
     const bookRead = document.createElement('td');
     if (item.read) {
@@ -57,6 +62,7 @@ function deleteBook(bookId) {
   const confirmation = window.confirm('Do you want to remove that book?');
   if (confirmation) {
     myLibrary.splice(bookId, 1);
+    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
     render();
   } else {
     render();
