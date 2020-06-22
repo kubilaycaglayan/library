@@ -97,6 +97,7 @@ function addBookToLibrary() {
   const pages = document.getElementById("pages").value;
   let read = document.querySelector('input[name="read"]:checked').value;
   read = (read === "true") ? true : false;
+  
   if ( title.length > 0 && author.length > 0 && pages.length > 0 ) {
     myLibrary.push(new Book(title, author, pages, read));
     render();
