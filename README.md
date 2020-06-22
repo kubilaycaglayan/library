@@ -1,3 +1,18 @@
+<!--
+*** Thanks for checking out this README Template. If you have a suggestion that would
+*** make this better, please fork the repo and create a pull request or simply open
+*** an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+-->
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 [![Contributors][contributors-shield]][contributors-url] 
 [![Forks][forks-shield]][forks-url] 
 [![Stargazers][stars-shield]][stars-url] 
@@ -72,4 +87,13 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](lic.url) licensed.
 
-<!-- MARKDOWN LINKS & IMAGES --> <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links --> [contributors-shield]: https://img.shields.io/github/contributors/javitocor/My-portfolio.svg?style=flat-square [contributors-url]: https://github.com/javitocor/My-portfolio/graphs/contributors [forks-shield]: https://img.shields.io/github/forks/javitocor/My-portfolio.svg?style=flat-square [forks-url]: https://github.com/javitocor/My-portfolio/network/members [stars-shield]: https://img.shields.io/github/stars/javitocor/My-portfolio.svg?style=flat-square [stars-url]: https://github.com/javitocor/My-portfolio/stargazers [issues-shield]: https://img.shields.io/github/issues/javitocor/My-portfolio.svg?style=flat-square [issues-url]: https://github.com/javitocor/My-portfolio/issues 
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/javitocor/My-portfolio.svg?style=flat-square
+[contributors-url]: https://github.com/javitocor/My-portfolio/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/javitocor/My-portfolio.svg?style=flat-square
+[forks-url]: https://github.com/javitocor/My-portfolio/network/members
+[stars-shield]: https://img.shields.io/github/stars/javitocor/My-portfolio.svg?style=flat-square
+[stars-url]: https://github.com/javitocor/My-portfolio/stargazers
+[issues-shield]: https://img.shields.io/github/issues/javitocor/My-portfolio.svg?style=flat-square
+[issues-url]: https://github.com/javitocor/My-portfolio/issues
