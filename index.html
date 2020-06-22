@@ -4,8 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
+  <link rel="icon" href="https://img.pngio.com/book-free-vector-icons-designed-by-icon-pond-learning-week-logo-book-icon-png-512_512.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/style.css">
 </head>
-<body>
-  
+<body class="text-center m-2">
+
+  <main class="container-fluid">
+    <div class="row">
+    <div class="col-8">
+      <div class="badge badge-primary px-5 m-4">
+        <h1 >Library</h1>
+      </div>
+      <section>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">TITLE</th>
+              <th scope="col">AUTHOR</th>
+              <th scope="col">PAGES</th>
+              <th scope="col">CHANGE READ STATUS</th>
+              <th scope="col">READ?</th>
+              <th scope="col">REMOVE BOOK</th>
+            </tr>
+          </thead>
+          <tbody id="library">
+           
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+    <div class="col-4">
+      <div>
+        <div class="btn btn-primary my-4" id="addBookSectionButton">
+          OPEN ADD BOOK SECTION
+        </div>
+      </div>
+      <section class="bg-primary p-3" id="addBookSection">
+        <div class="badge badge-warning p-2 m-1">
+          Add your favorite book to the library!
+        </div>
+        <form class="d-flex flex-column w-75 m-auto" action="javascript:void(0);">
+
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" placeholder="Add Title" required> 
+
+          <label for="author">Author</label>
+          <input type="text" name="author" id="author" placeholder="Add Author" required>
+
+          <label for="pages">Pages</label>
+          <input type="number" name="pages" id="pages" placeholder="Add Pages" required>
+
+          <div>
+            <input type="radio" name="read" id="read_true" value="true">
+          <label for="read_true">I have read this book</label>
+          </div>
+        <div>
+          <input type="radio" name="read" id="read_false" value="false" checked>
+          <label for="read_false">I have not read this book</label>
+        </div>
+          <input type="submit" class="btn btn-success" id="submit" value="Add Book" >
+
+        </form>
+      </section>
+    </div>
+  </div>
+
+</main>
+<script src="assets/script/script.js" type="text/javascript"></script>
+<script src="assets/script/dom.js" type="text/javascript"></script>
 </body>
 </html>
