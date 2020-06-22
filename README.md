@@ -29,10 +29,10 @@ Additional description about the project and its features.
 
 ## Built With
 
-- HTML, 
-- CSS,
-- JAVASCRIPT,
-- BOOTSTRAP,
+- HTML 
+- CSS
+- JAVASCRIPT
+- BOOTSTRAP
 - SASS
 
 ## Live Demo
@@ -89,11 +89,11 @@ This project is [MIT](lic.url) licensed.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/javitocor/My-portfolio.svg?style=flat-square
-[contributors-url]: https://github.com/javitocor/My-portfolio/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/javitocor/My-portfolio.svg?style=flat-square
-[forks-url]: https://github.com/javitocor/My-portfolio/network/members
-[stars-shield]: https://img.shields.io/github/stars/javitocor/My-portfolio.svg?style=flat-square
-[stars-url]: https://github.com/javitocor/My-portfolio/stargazers
-[issues-shield]: https://img.shields.io/github/issues/javitocor/My-portfolio.svg?style=flat-square
-[issues-url]: https://github.com/javitocor/My-portfolio/issues
+[contributors-shield]: https://img.shields.io/github/contributors/kubilaycaglayan/library.svg?style=flat-square
+[contributors-url]: https://github.com/kubilaycaglayan/library/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kubilaycaglayan/library.svg?style=flat-square
+[forks-url]: https://github.com/kubilaycaglayan/library/network/members
+[stars-shield]: https://img.shields.io/github/stars/kubilaycaglayan/library.svg?style=flat-square
+[stars-url]: https://github.com/kubilaycaglayan/library/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kubilaycaglayan/library.svg?style=flat-square
+[issues-url]: https://github.com/kubilaycaglayan/library/issues
