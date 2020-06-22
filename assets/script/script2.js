@@ -95,12 +95,12 @@ function addBookToLibrary() {
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
   const pages = document.getElementById("pages").value;
-  const read = document.querySelector('input[name="read"]:checked').value;
-
+  let read = document.querySelector('input[name="read"]:checked').value;
+  read = (read === "true") ? true : false;
   if ( title.length > 0 && author.length > 0 && pages.length > 0 ) {
     myLibrary.push(new Book(title, author, pages, read));
-    document.getElementsByTagName("form")[0].reset();
     render();
+    document.getElementsByTagName("form")[0].reset();    
   }
 }
 
